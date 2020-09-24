@@ -17,6 +17,7 @@ y = np.array(df['epsilon'])
 X = preprocessing.scale(X)
 y = np.array(df['epsilon'])
 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 model = keras.models.Sequential([
                                  keras.layers.Dense(8*n, activation='linear'),
